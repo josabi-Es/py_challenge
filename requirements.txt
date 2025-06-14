@@ -1,0 +1,14 @@
+pandas
+requests
+numpy
+scikit-learn
+joblib 
+fastapi
+pydantic
+minio
+io
+json 
+uvicorn
+pytest
+httpx
+streamlit

@@ -1,0 +1,18 @@
+FROM python:3.11-slim
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia el código fuente
+COPY src/ /app/
+
+# Instala dependencias
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Expone el puerto que usa Uvicorn
+EXPOSE 8000
+
+# Ejecuta primero el pipeline y luego la API
+CMD ["sh", "-c", "python -m my_api.pipeline && uvicorn my_api.app:app --host 0.0.0.0 --port 8000"]
+
+

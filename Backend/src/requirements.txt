@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+minio
+python-dotenv
+scikit-learn
+pandas
+numpy
+pytest
+requests
+pydantic

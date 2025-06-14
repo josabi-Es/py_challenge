@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia solo los archivos necesarios
+COPY src/ /app/
+
+
+# Instala dependencias
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt
+
+# Expone el puerto de FastAPI
+EXPOSE 8501
+
+# Usa Uvicorn para arrancar la API
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
