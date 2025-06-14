@@ -24,4 +24,4 @@ To launch the full application locally:
 docker-compose build
 docker-compose up
 
-Note: The .env file is required for both the frontend and backend to correctly connect to the other services.
+Note: The necessary .env files are included to ensure both the frontend and backend services connect correctly and run smoothly.
